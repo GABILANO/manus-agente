@@ -1,0 +1,56 @@
+_version: '3.8'
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: manus-agente-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: always
+
+  server:
+    build:
+      context: ../server
+      dockerfile: Dockerfile
+    container_name: manus-agente-server
+    ports:
+      - "3000:3000"
+    environment:
+      # Variables de entorno cargadas desde el archivo .env en el host
+      - PORT=3000
+      - NODE_ENV=development
+      - SERVER_SECRET=${SERVER_SECRET}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+      - GOOGLE_REDIRECT_URI=${GOOGLE_REDIRECT_URI}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - REDIS_URL=redis://redis:6379 # Usar el nombre del servicio de Docker Compose
+    depends_on:
+      - redis
+    volumes:
+      - ../server:/app
+      - /app/node_modules # Evitar que node_modules del host sobrescriba el del contenedor
+    restart: always
+
+  # worker:
+  #   build:
+  #     context: ../server
+  #     dockerfile: Dockerfile
+  #   container_name: manus-agente-worker
+  #   command: node src/jobs/worker.js
+  #   environment:
+  #     - NODE_ENV=production
+  #     - SERVER_SECRET=${SERVER_SECRET}
+  #     - GEMINI_API_KEY=${GEMINI_API_KEY}
+  #     - REDIS_URL=redis://redis:6379
+  #   depends_on:
+  #     - redis
+  #   volumes:
+  #     - ../server:/app
+  #     - /app/node_modules
+  #   restart: always
+
+volumes:
+  redis_data:_

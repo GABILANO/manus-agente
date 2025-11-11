@@ -1,0 +1,40 @@
+_name: CI - Build and Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Install Server Dependencies
+      run: npm install
+      working-directory: ./server
+
+    - name: Run Server Tests (Placeholder)
+      run: echo "Tests del servidor ejecutados (Placeholder)"
+      working-directory: ./server
+
+    - name: Install Web Dependencies
+      run: npm install
+      working-directory: ./web
+
+    - name: Build Web Application (Placeholder)
+      run: echo "Construcción de la aplicación web ejecutada (Placeholder)"
+      working-directory: ./web
+
+    - name: Run Web Tests (Placeholder)
+      run: echo "Tests de la aplicación web ejecutados (Placeholder)"
+      working-directory: ./web_

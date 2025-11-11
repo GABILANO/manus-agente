@@ -1,0 +1,44 @@
+_name: Deploy to Codespaces/Pages
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production # Usar un entorno de GitHub para secretos
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Install Server Dependencies
+      run: npm install
+      working-directory: ./server
+
+    - name: Build Web Application
+      run: |
+        npm install
+        npm run build
+      working-directory: ./web
+
+    - name: Deploy to Codespaces (Simulated)
+      run: echo "El despliegue en Codespaces se gestiona automáticamente al abrir un Codespace."
+
+    - name: Deploy to GitHub Pages (Simulated)
+      run: echo "Para el despliegue en Pages, se necesitaría configurar el adaptador de SvelteKit."
+
+    # Esqueleto para la rotación de tokens (No funcional sin un script de rotación real)
+    - name: Token Rotation Check (Placeholder)
+      run: echo "Este paso se usaría para ejecutar un script de rotación de tokens."
+      # Se necesitaría un script como `scripts/rotate-tokens.sh` y acceso a GitHub Secrets.
+      # env:
+      #   SERVER_SECRET: ${{ secrets.SERVER_SECRET }}
+      #   ENCRYPTED_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+_
