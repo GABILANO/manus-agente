@@ -1,0 +1,27 @@
+{
+  "duration": 7.820000171661377,
+  "language": "spanish",
+  "segments": [
+    {
+      "start": 0,
+      "end": 2,
+      "text": " No podemos ignorar este precedente legal."
+    },
+    {
+      "start": 2,
+      "end": 3.2799999713897705,
+      "text": " Es fundamental para el caso."
+    },
+    {
+      "start": 3.2799999713897705,
+      "end": 5.920000076293945,
+      "text": " Pero las circunstancias actuales difieren significativamente."
+    },
+    {
+      "start": 5.920000076293945,
+      "end": 7.920000076293945,
+      "text": " Pido la palabra para añadir un comentario."
+    }
+  ],
+  "full_text": "No podemos ignorar este precedente legal. Es fundamental para el caso. Pero las circunstancias actuales difieren significativamente. Pido la palabra para añadir un comentario."
+}

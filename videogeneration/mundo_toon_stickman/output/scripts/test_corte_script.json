@@ -1,0 +1,43 @@
+{
+  "title": "Las Reglas Flexibles del Capitán Enredo",
+  "duration_seconds": 7.820000171661377,
+  "style": "stickman_ironic",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "start_time": 0.0,
+      "end_time": 2.5,
+      "duration_seconds": 2.5,
+      "visual_description": "Un stickman imponente (Capitán Enredo, carácter 1) de pie sobre una zona 'segura' (blanca), señalando un suelo gris. Otro stickman más pequeño (Luna, carácter 2) asiente seriamente a un lado.",
+      "dialogue": "¡Atención, piratas! ¡Regla clave: Nadie toca el suelo gris, o pierden!",
+      "character": "character_1",
+      "action": "talking",
+      "expression": "happy",
+      "hand_gesture": "pointing"
+    },
+    {
+      "scene_number": 2,
+      "start_time": 2.5,
+      "end_time": 5.0,
+      "duration_seconds": 2.5,
+      "visual_description": "Capitán Enredo está perdiendo el juego, con un pie sobre el suelo gris. Se sobresalta, luego señala rápidamente su propio calcetín con aire de '¡Ajá!'. Luna lo mira con incredulidad.",
+      "dialogue": "¡Esperen! ¡Mi calcetín es AZUL hoy! ¡Así que YO SÍ puedo pisar!",
+      "character": "character_1",
+      "action": "surprised",
+      "expression": "confused",
+      "hand_gesture": "pointing"
+    },
+    {
+      "scene_number": 3,
+      "start_time": 5.0,
+      "end_time": 7.820000171661377,
+      "duration_seconds": 2.820000171661377,
+      "visual_description": "Luna se acerca a Capitán Enredo, quien retrocede un paso, encogiéndose. Luna señala enfáticamente al Capitán, luego al suelo. Una pequeña 'X' roja aparece sobre la cabeza del Capitán Enredo.",
+      "dialogue": "¡Capitán Enredo! ¿Es regla o es un chiste? ¡No puedes cambiarla 'porque sí'!",
+      "character": "character_2",
+      "action": "talking",
+      "expression": "angry",
+      "hand_gesture": "pointing"
+    }
+  ]
+}

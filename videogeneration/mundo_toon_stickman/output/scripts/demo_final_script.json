@@ -1,0 +1,43 @@
+{
+  "title": "Don Disparate: El Entrenador Confundido",
+  "duration_seconds": 7.820000171661377,
+  "style": "stickman_ironic",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "start_time": 0.0,
+      "end_time": 2.5,
+      "duration_seconds": 2.5,
+      "visual_description": "Don Disparate (character_1), un stickman con un silbato, gesticula enérgicamente frente a un stickman niño (character_2). Don Disparate señala una pizarra donde hay un dibujo de una jugada de fútbol. El niño asiente, atento.",
+      "dialogue": "¡Atención! ¡Esta jugada es CLAVE para el partido de HOY!",
+      "character": "character_1",
+      "action": "talking",
+      "expression": "happy",
+      "hand_gesture": "pointing"
+    },
+    {
+      "scene_number": 2,
+      "start_time": 2.5,
+      "end_time": 5.3,
+      "duration_seconds": 2.8,
+      "visual_description": "Don Disparate (character_1) se detiene, se rasca la cabeza y su expresión cambia a confusión. La pizarra de fútbol se desvanece y aparece un aro de baloncesto. El niño (character_2) frunce el ceño, perplejo.",
+      "dialogue": "Pero... hoy jugamos baloncesto. Las reglas son... ¡muy diferentes, ¿verdad?!",
+      "character": "character_1",
+      "action": "thinking",
+      "expression": "confused",
+      "hand_gesture": "thinking"
+    },
+    {
+      "scene_number": 3,
+      "start_time": 5.3,
+      "end_time": 7.820000171661377,
+      "duration_seconds": 2.520000171661377,
+      "visual_description": "El niño (character_2) abre la boca para intentar hablar, pero Don Disparate (character_1) levanta rápidamente una mano, interrumpiéndolo. Ambos stickman se miran con una mezcla de confusión y frustración evidente.",
+      "dialogue": "¡Pido la palabra para añadir un comentario!",
+      "character": "character_1",
+      "action": "talking",
+      "expression": "surprised",
+      "hand_gesture": "waving"
+    }
+  ]
+}

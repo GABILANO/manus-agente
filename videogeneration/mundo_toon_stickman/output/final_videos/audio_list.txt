@@ -1,0 +1,3 @@
+file '/home/ubuntu/manus-agente/videogeneration/mundo_toon_stickman/output/audio/demo_final_scene1.mp3'
+file '/home/ubuntu/manus-agente/videogeneration/mundo_toon_stickman/output/audio/demo_final_scene2.mp3'
+file '/home/ubuntu/manus-agente/videogeneration/mundo_toon_stickman/output/audio/demo_final_scene3.mp3'
