@@ -1,0 +1,18 @@
+# Dependencias del Sistema de Generación de Video Costo-Optimizado
+
+# Generación de guiones con IA
+google-genai>=0.2.0
+
+# Generación de voz (Text-to-Speech)
+pyttsx3>=2.90
+
+# Generación de imágenes y frames
+Pillow>=10.0.0
+
+# Ensamblaje de video
+moviepy>=1.0.3
+imageio>=2.31.0
+imageio-ffmpeg>=0.4.9
+
+# Utilidades
+numpy>=1.24.0

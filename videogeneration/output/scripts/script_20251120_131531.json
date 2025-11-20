@@ -1,0 +1,16 @@
+{
+  "title": "Un stickman muy divertido que saluda, salta de ale",
+  "duration_seconds": 10,
+  "scenes": [
+    {
+      "scene_number": 1,
+      "duration_seconds": 10,
+      "visual_description": "Un stickman muy divertido que saluda, salta de alegría y baila con energía",
+      "dialogue": "",
+      "action": "default"
+    }
+  ],
+  "generated_at": "2025-11-20T13:15:31.360206",
+  "style": "stickman",
+  "original_prompt": "Un stickman muy divertido que saluda, salta de alegría y baila con energía"
+}
