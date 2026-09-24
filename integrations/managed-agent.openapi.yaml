@@ -1,0 +1,61 @@
+openapi: 3.0.3
+info:
+  title: Managed Agent Tool
+  version: 1.0.0
+  description: Run and continue a Gemini managed agent through an HTTP tool.
+servers:
+  - url: http://127.0.0.1:8080
+paths:
+  /v1/managed-agent/run:
+    post:
+      operationId: runManagedAgent
+      summary: Run or continue an autonomous managed-agent task
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RunRequest'
+      responses:
+        '200':
+          description: Managed-agent result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RunResponse'
+        '502':
+          description: Upstream managed-agent failure
+components:
+  schemas:
+    RunRequest:
+      type: object
+      required: [input]
+      properties:
+        input:
+          type: string
+          minLength: 1
+          maxLength: 100000
+        agent:
+          type: string
+          description: Optional managed agent ID.
+        environment_id:
+          type: string
+          description: Existing sandbox ID for a follow-up turn.
+        previous_interaction_id:
+          type: string
+          description: Optional interaction chain ID for a follow-up turn.
+    RunResponse:
+      type: object
+      required: [output]
+      properties:
+        output:
+          type: string
+        interaction_id:
+          type: string
+          nullable: true
+        environment_id:
+          type: string
+          nullable: true
+        status:
+          type: string
+          nullable: true
